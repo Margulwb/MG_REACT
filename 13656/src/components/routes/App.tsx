@@ -1,7 +1,5 @@
-import { FC } from "react"
+import { FC, useState  } from "react"
 
 export const App : FC = () => {
-    return(
-        <>App</>
-    )
+    return <div>hej</div>
 }
