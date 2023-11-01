@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom'; //routes(to switch) routh (ostatni route path='*' i na strone 404) wyświetlanie| component link to 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'; //routes(to switch) routh (ostatni route path='*' i na strone 404) wyświetlanie| component link to 
 import './index.css';
-import { App } from './components/routes/App';
+import 'bootstrap/dist/css/bootstrap.css';
+import './custom.scss';
 import reportWebVitals from './reportWebVitals';
+import { Home } from './components/routes/Home';
+import { Blog } from './components/routes/Blog';
+import { Photos } from './components/routes/Photos';
+import { Profile } from './components/routes/Profile';
+import { Error404 } from './components/routes/Error404';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +17,13 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App/>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path="Blog" element={<Blog />} />
+        <Route path="Photos" element={<Photos />} />
+        <Route path="Profile" element={<Profile />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
