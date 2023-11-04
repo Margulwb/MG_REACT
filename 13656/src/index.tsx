@@ -10,17 +10,18 @@ import { Blog } from './components/routes/Blog';
 import { Photos } from './components/routes/Photos';
 import { Profiles } from './components/routes/Profiles';
 import { Error404 } from './components/routes/Error404';
+import { Todo } from './components/routes/Todo';
 
 const fetchDataFromApi = async () => {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     if (!response.ok) {
-      throw new Error("Błąd pobierania danych z API");
+      throw new Error("Errrorrr");
     }
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Błąd: " + error);
+    console.error(error);
     return [];
   }
 };
@@ -37,6 +38,7 @@ fetchDataFromApi().then((usersData) => {
           <Route path="Blog" element={<Blog />} />
           <Route path="Photos" element={<Photos />} />
           <Route path="Profile" element={<Profiles users={usersData} />} />
+          <Route path="/:idUser/Todo" element={<Todo userId={usersData.userId} id={usersData.id} title={"asd"} completed={true}/>} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>

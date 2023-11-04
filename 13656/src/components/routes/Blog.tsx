@@ -27,11 +27,11 @@ export const Blog : FC = () => {
         <>
             <NavMain/>
             <main className="d-flex justify-content-center flex-wrap">
-                {
-                    posts.map((post) => (
-                        <Post userId={post.userId} id={post.id} title={post.title} body={post.body}/>
-                    ))
-                }
+            {
+                posts.map((post) => (
+                    <Post userId={post.userId} id={post.id} title={post.title} body={post.body}/>
+                ))
+            }
             </main>
         </>
     )

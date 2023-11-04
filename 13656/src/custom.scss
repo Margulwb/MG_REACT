@@ -38,7 +38,7 @@ nav .item:hover{
 
 .login-page{
     width: 90vw;
-    margin: 0 5vw;
+    margin: 5em 5vw;
 }
 
 .login-form{
@@ -52,6 +52,11 @@ nav .item:hover{
     margin-top: 5em;
 }
 
+.logout{
+    position: fixed;
+    right: 2em;
+}
+
 .login-form button,
 .logout button{
     background-color: $bs-primary;
@@ -63,7 +68,7 @@ nav .item:hover{
 }
 
 .logout button{
-    margin-top: 5em ;
+    margin-top: 0 ;
 }
 
 .login-form button:hover,

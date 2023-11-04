@@ -1,4 +1,5 @@
 import { FC, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import User from "./User";
 import { Post } from "../action/Post";
 
@@ -36,6 +37,7 @@ export const UserProfile: FC<UserProfileProps> = ({ user }) => {
             <p>Phone: {user.phone}</p>
             <p>Website: {user.website}</p>
             <p>Company: {user.company.name}</p>
+            <Link to={`/${user.id}/Todo`}>Zobacz Todos</Link>
         </div>
 
         <div className="d-flex justify-content-center flex-wrap">
