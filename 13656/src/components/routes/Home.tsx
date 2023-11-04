@@ -7,6 +7,7 @@ import { Post } from '../action/Post'
 import { Photo } from "../action/Photo";
 
 type postsProps = {
+    userId: number;
     id: number;
     title: string;
     body: string;
@@ -48,7 +49,7 @@ export const Home : FC = () => {
                 <div className="d-flex justify-content-center flex-wrap">
                     {
                         posts.slice(1, 3).map((post) => (
-                            <Post id={post.id} title={post.title} body={post.body}/>
+                            <Post userId={post.userId} id={post.id} title={post.title} body={post.body}/>
                         ))
                     }
                 </div>

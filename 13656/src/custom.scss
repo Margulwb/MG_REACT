@@ -1,4 +1,4 @@
-$body-bg: #000;
+$bs-primary: #0d6efd;
 
 .logo{
     width: 50px;
@@ -23,4 +23,71 @@ nav .item:hover{
 .post div{
     width: 10vw;
 }
+.post-comment{
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 50%;
+}
+
+.user-data{
+    width: 20%;
+    height: 70vh;
+    border-right: 4px dashed blue;
+    margin-left: 2em;
+}
+
+.login-page{
+    width: 90vw;
+    margin: 0 5vw;
+}
+
+.login-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 20em;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 1em;
+    margin-top: 5em;
+}
+
+.login-form button,
+.logout button{
+    background-color: $bs-primary;
+    border: 3px solid gold;
+    border-radius: 8px;
+    margin-top: 1em;
+    padding: .2em .5em;
+    color: #fff;
+}
+
+.logout button{
+    margin-top: 5em ;
+}
+
+.login-form button:hover,
+.logout button:hover{
+    background-color: gold;
+    border: 3px solid $bs-primary;
+    color: $bs-primary;
+}
+
+.logout button{
+    margin-right: 8px;
+}
+
+.comment{
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.comment-btn{
+    background: none;
+    color: $bs-primary;
+    border: none;
+}
+
+
 @import '~bootstrap/scss/bootstrap.scss';

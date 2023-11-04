@@ -6,7 +6,7 @@ import LOGO from '../logo.png'
 
 export const NavMain : FC = () => {
     return(
-        <nav className="bg-primary d-flex justify-content-center">
+        <nav className="bg-primary d-flex justify-content-center fixed-top">
             <Link to="/">
                 <img src={LOGO} alt="logo" className="logo"/>
             </Link>

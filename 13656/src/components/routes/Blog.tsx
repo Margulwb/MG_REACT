@@ -5,10 +5,11 @@ import { NavMain } from "../NavMain";
 import { Post } from '../action/Post'
 
 type postsProps = {
+    userId: number;
     id: number;
     title: string;
     body: string;
-};
+  };
 
 export const Blog : FC = () => {
     const [posts, setPosts] = useState<postsProps[]>([]);
@@ -28,7 +29,7 @@ export const Blog : FC = () => {
             <main className="d-flex justify-content-center flex-wrap">
                 {
                     posts.map((post) => (
-                        <Post id={post.id} title={post.title} body={post.body}/>
+                        <Post userId={post.userId} id={post.id} title={post.title} body={post.body}/>
                     ))
                 }
             </main>
