@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import { Home } from './components/routes/Home';
 import { Blog } from './components/routes/Blog';
 import { Photos } from './components/routes/Photos';
-import { Profile } from './components/routes/Profile';
+import { Profiles } from './components/routes/Profiles';
 import { Error404 } from './components/routes/Error404';
 
 const root = ReactDOM.createRoot(
@@ -21,7 +21,7 @@ root.render(
         <Route path='/' element={<Home />} />
         <Route path="Blog" element={<Blog />} />
         <Route path="Photos" element={<Photos />} />
-        <Route path="Profile" element={<Profile />} />
+        <Route path="Profile" element={<Profiles />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>

@@ -4,7 +4,7 @@ import '../../custom.scss';
 import { NavMain } from "../NavMain";
 import { Footer } from "../Fotter";
 import { Post } from '../action/Post'
-import { Photo } from "../action/Photos";
+import { Photo } from "../action/Photo";
 
 type postsProps = {
     id: number;
@@ -43,11 +43,11 @@ export const Home : FC = () => {
         <>
             <NavMain/>
             <main >
-                <h1 className="h1 text-center">Welcome!</h1>
-                <h1 className="h5 text-center">Amazing page</h1>
+                <h1 className="h1 text-center pb-1 pt-5">Welcome!</h1>
+                <h1 className="h5 text-center pb-5">Amazing page</h1>
                 <div className="d-flex justify-content-center flex-wrap">
                     {
-                        posts.slice(0, 2).map((post) => (
+                        posts.slice(1, 3).map((post) => (
                             <Post id={post.id} title={post.title} body={post.body}/>
                         ))
                     }
