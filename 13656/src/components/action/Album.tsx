@@ -12,6 +12,6 @@ export const Album : FC<Albums> = ({ userId, id, title, body }) => {
   return(
       <div key={id} className="p-3 m-1">
           {title}
-    </div>
+      </div>
   )
 }

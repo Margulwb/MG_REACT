@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { Todos } from '../action/Todos';
 
 interface TodoProps {
@@ -9,13 +9,8 @@ interface TodoProps {
   completed: boolean;
 }
 
-export const Todo: FC<TodoProps> = ({ userId,id,title,completed }) => {
-  const { idUser } = useParams<{ idUser: string }>();
+export const Todo: FC<TodoProps> = () => {
   const [todos, setTodos] = useState<TodoProps[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  
-
   useEffect(() => { getTodos() }, []);
 
   const getTodos = async () => {
@@ -30,6 +25,7 @@ export const Todo: FC<TodoProps> = ({ userId,id,title,completed }) => {
   return (
     <div>
       <h1>Todos</h1>
+      <p><Link to={`/Profile`}>Zobacz Todos</Link></p>
       <ul>
         {todos.map((todo) => (
           <Todos key={todo.id} userId={todo.userId} id={todo.id} title={todo.title} completed={todo.completed} />

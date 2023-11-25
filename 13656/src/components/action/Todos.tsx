@@ -1,6 +1,5 @@
-import { FC, useState, useEffect } from "react"
+import { FC } from "react"
 import '../../custom.scss';
-import { Comment } from "./Comment";
 
 interface TodoProps{
   userId: number;
